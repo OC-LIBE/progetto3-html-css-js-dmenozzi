@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>animali</title>
     <link href="styles.css" rel="stylesheet">
+    <script src="main.js" defer></script>
 </head>
 <body>
    <header>
@@ -20,30 +21,8 @@
    </nav>
 
    <main>
-       <article> 
-        <section class="animal-card-text">
-            <h1> Nome animale </h1>
-            <small>
-                <span> 2 years old </span> - 
-                <span>cat</span>
-            </small>
-            <p>
-                Lorem ipsum dolor sit amet consectetur,
-                adipisicing elit. Error, nihil asperiores 
-                ullam deserunt laborum aperiam architecto sequi
-                ratione consequatur nobis. Optio, consequuntur 
-                voluptatum voluptate aspernatur veritatis velit 
-                ad? Maiores, atque.
-            </p>
-                <a href="http://www.google.com"
-                target="_blank"
-                class="adopt-button">Adopt me</a>
-        </section>
-        <section class="animal-card-photo">
-            <img src="static/dog2.webp">
-        </section>
-       </article>
 
+    <template id="animal-card-template">
        <article> 
         <section class="animal-card-text">
             <h1> Nome animale </h1>
@@ -67,6 +46,7 @@
             <img src="static/dog2.webp">
         </section>
        </article>
+       </template>
    </main>
 </body>
 </html>
