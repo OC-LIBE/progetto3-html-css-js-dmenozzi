@@ -36,7 +36,13 @@ async function displayPets(){
         image.src = pet.photo;
         
         const specie = clone.querySelector(".Specie");
-        specie.textContent = pet.species;
+        const firstletter = pet.species.charAt(0)
+        const firstLetterCap = firstletter.toUpperCase()
+        const remainingLetters = pet.species.slice(1)
+        const capitalizedWord = firstLetterCap + remainingLetters
+        specie.textContent = capitalizedWord
+
+        // const buttonname = clone.querySelector("adopt-button")
         
         const age = clone.querySelector(".Age");
         const Age = calcAge(pet.birthYear);
@@ -60,4 +66,16 @@ async function displayPets(){
 }
 
 displayPets()
+
+function displayFiltersAnimals (e) {
+    console.log(e.target.dataset.displayFiltersAnimals);
+
+}
+const filterButtons = document.querySelectorAll("nav buttons");
+
+filterButtons.forEach(button =>{
+    button.addEventListener('click', (e) => {
+        displayFiltersAnimals(e)
+    })
+});
 
