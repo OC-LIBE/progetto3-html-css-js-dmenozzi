@@ -3,8 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>animali</title>
+    <link href="styles.css" rel="stylesheet">
+    <script src="main.js" defer></script>
 </head>
 <body>
+   <header>
+    <h1>Welcome</h1>
+    <h2> our friends need a home</h2>
+   </header>
+
+   <nav>
+    <button data-filter="All"> Show all </button>
+    <button data-filter="dog"> Dogs </button>
+    <button data-filter="cat"> Cats </button>
+    <button data-filter="rabbit"> Rabbits </button>
+   </nav>
+
+   <main>
+
+    <template id="animal-card-template">
+       <article> 
+        <section class="animal-card-text">
+            <h1> Nome animale </h1>
+            <small>
+                <span class="Age"> 2 years old </span> -  
+                <span class="Specie"> cat </span>
+            </small>
+            <p>
+                Lorem ipsum dolor sit amet consectetur,
+                adipisicing elit. Error, nihil asperiores 
+                ullam deserunt laborum aperiam architecto sequi
+                ratione consequatur nobis. Optio, consequuntur 
+                voluptatum voluptate aspernatur veritatis velit 
+                ad? Maiores, atque.
+            </p>
+                <a href="http://www.google.com"
+                target="_blank"
+                class="adopt-button">Adopt me</a>
+        </section>
+        <section class="animal-card-photo">
+            <img src="static/dog2.webp">
+        </section>
+       </article>
+       </template>
+   </main>
 </body>
 </html>
