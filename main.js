@@ -65,13 +65,26 @@ async function displayPets(){
 
 }
 
-displayPets()
 
 function displayFiltersAnimals (e) {
-    console.log(e.target.dataset.displayFiltersAnimals);
+    let article = document.querySelectorAll("article")
+    article.forEach(articolo =>{
+        const specie = articolo.querySelector(".Specie").innerText.toLowerCase()
+        console.log(specie)
+        if (e.target.dataset.filter == "All"){
+            articolo.style.display = "flex";
+        }
+        else if (specie !== e.target.dataset.filter){
+            articolo.style.display = "none"
+        }
+        else  {
+            articolo.style.display = "flex"
+        }
+    }
+    )
 
 }
-const filterButtons = document.querySelectorAll("nav buttons");
+const filterButtons = document.querySelectorAll("nav button");
 
 filterButtons.forEach(button =>{
     button.addEventListener('click', (e) => {
@@ -79,3 +92,4 @@ filterButtons.forEach(button =>{
     })
 });
 
+displayPets()
